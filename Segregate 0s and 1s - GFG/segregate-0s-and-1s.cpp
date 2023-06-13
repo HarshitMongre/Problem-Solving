@@ -11,7 +11,25 @@ class Solution{
 public:
     void segregate0and1(int arr[], int n) {
         // code here
-          sort(arr , arr+n);
+        //   sort(arr , arr+n);
+        
+        int s= 0, e = n-1;
+        while(s<e){
+            if(arr[s] == 1 && arr[e] == 0){
+                swap(arr[s] , arr[e]);
+                s++;
+                e--;
+            }
+            
+            if(arr[s] == 0){
+                s++;
+            }
+            
+            if(arr[e] == 1){
+                e--;
+            }
+        }
+        
     }
 };
 
